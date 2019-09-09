@@ -85,6 +85,11 @@ class TaskResult(models.Model):
         verbose_name=_('Task Meta Information'),
         help_text=_('JSON meta information about the task, '
                     'such as information on child tasks'))
+    execution_time = models.CharField(
+        max_length=128,
+        verbose_name=_('Execution time taken'),
+        help_text=_('Time taken by task'))
+    
 
     objects = managers.TaskResultManager()
 
