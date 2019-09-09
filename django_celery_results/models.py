@@ -88,7 +88,8 @@ class TaskResult(models.Model):
     execution_time = models.CharField(
         max_length=128,
         verbose_name=_('Execution time taken'),
-        help_text=_('Time taken by task'))
+        help_text=_('Time taken by task'),
+        default= 0)
     
 
     objects = managers.TaskResultManager()
